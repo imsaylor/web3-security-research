@@ -23,6 +23,7 @@ kept honest about what they are: reading notes, not audit reports.
 | [notes/reentrancy.md](notes/reentrancy.md) | Reentrancy: mechanism, The DAO, detection, fixes (SWC-107) | First draft, 2026-11-16 |
 | [notes/access-control-failures.md](notes/access-control-failures.md) | Access-control failures: Parity multisig incidents, initialization bugs, `tx.origin`, unprotected withdrawal (SWC-105, SWC-106, SWC-112, SWC-115) | First draft, 2026-11-16 |
 | [notes/openzeppelin-guards-compared.md](notes/openzeppelin-guards-compared.md) | OpenZeppelin `ReentrancyGuard`, `ReentrancyGuardTransient`, and `Ownable` source, compared against my from-scratch lab versions | Study note, 2026-11-16 |
+| [notes/transient-storage-guard.md](notes/transient-storage-guard.md) | Transient storage (EIP-1153) and the transient reentrancy guard: `TransientSlot`, assembly `tstore`/`tload` on Solidity 0.8.24, lab results | Study note + lab, 2026-11-17 |
 
 ## Sources consulted so far
 
@@ -37,6 +38,7 @@ kept honest about what they are: reading notes, not audit reports.
   OpenZeppelin documentation, *Access Control*.
 - OpenZeppelin Contracts source (commit `7df9390d`): `ReentrancyGuard`,
   `ReentrancyGuardTransient`, `Ownable`.
+- EIP-1153: Transient storage opcodes; EIP-7201: Namespaced storage layout.
 - Harvest Finance, *Harvest Flashloan Economic Attack Post-Mortem*
   (October 26, 2020) — cited in the DeFi companion repository.
 - Uniswap, *Uniswap v2 Core* whitepaper (Adams, Zinsmeister, Robinson,
